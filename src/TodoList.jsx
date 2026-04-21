@@ -1,7 +1,9 @@
+import TodoListItem from "./TodoListItem";
+
 function TodoList(props) {
     return (
         <ul>
-            {props.todoList.map(todo => <li key={todo.id}>{todo.title}</li>)}
+            {props.todoList.map(todo => <TodoListItem key={todo.id} todo={todo}></TodoListItem>)}
         </ul>
     )
 }
