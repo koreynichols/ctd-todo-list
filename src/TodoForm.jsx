@@ -1,7 +1,8 @@
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 
 function TodoForm({ onAddTodo }) {
     const inputRef = useRef();
+    const [workingTodoTitle, setWorkingTodoTitle] = useState('')
 
     const handleAddTodo = (event) => {
         event.preventDefault();
