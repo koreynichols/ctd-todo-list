@@ -1,10 +1,18 @@
 import TodoListItem from "./TodoListItem";
 
 function TodoList({todoList}) {
+    console.log(todoList)
     return (
-        <ul>
-            {todoList.map(todo => <TodoListItem key={todo.id} todo={todo}></TodoListItem>)}
-        </ul>
+        <div>
+            {todoList.length == 0 ? (
+                <p>Add todo above to get started</p>
+            ) : (
+                <ul>
+                    {todoList.map(todo => <TodoListItem key={todo.id} todo={todo}></TodoListItem>)}
+                </ul>
+            )}
+        </div>
+        
     )
 }
 
