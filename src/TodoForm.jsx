@@ -26,7 +26,7 @@ function TodoForm({ onAddTodo }) {
                 placeholder={'Todo text'}
                 required 
             />
-            <button type="submit">Add Todo</button>
+            <button type="submit" disabled={!workingTodoTitle.trim()}>Add Todo</button>
         </form>
     );
 }
