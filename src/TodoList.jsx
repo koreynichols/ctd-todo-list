@@ -1,6 +1,6 @@
 import TodoListItem from "./TodoListItem";
 
-function TodoList({todoList}) {
+function TodoList({todoList, onCompleteTodo}) {
     console.log(todoList)
     return (
         <div>
@@ -8,7 +8,7 @@ function TodoList({todoList}) {
                 <p>Add todo above to get started</p>
             ) : (
                 <ul>
-                    {todoList.map(todo => <TodoListItem key={todo.id} todo={todo}></TodoListItem>)}
+                    {todoList.map(todo => <TodoListItem key={todo.id} todo={todo} onCompleteTodo={onCompleteTodo}></TodoListItem>)}
                 </ul>
             )}
         </div>

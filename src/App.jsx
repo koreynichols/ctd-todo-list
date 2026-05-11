@@ -11,6 +11,7 @@ function App() {
   function addTodo(todoTitle) {
     const newTodo = {id: Date.now(), title: todoTitle, isCompleted: false}
     setTodoList(previous => [newTodo, ...previous])
+    console.log(todoList)
   };
 
   function completeTodo(id) {
@@ -27,7 +28,7 @@ function App() {
       <div>
         <h1>Todo List</h1>
         <TodoForm onAddTodo={addTodo}></TodoForm>
-        <TodoList todoList={todoList}></TodoList>    
+        <TodoList todoList={todoList} onCompleteTodo={completeTodo} ></TodoList>    
       </div>
   )
 }
